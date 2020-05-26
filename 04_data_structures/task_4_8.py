@@ -28,4 +28,4 @@ ip_a[2] = int(ip_a[2])
 ip_a[3] = int(ip_a[3])
 
 print("{:<10}{:<10}{:<10}{:<10}".format(ip_a[0],ip_a[1],ip_a[2],ip_a[3]))
-print("{:<10b}{:<10b}{:<10b}{:<10b}".format(ip_a[0],ip_a[1],ip_a[2],ip_a[3]))
+print("{:0>8b}  {:0>8b} {:0>8b} {:0>8b}".format(ip_a[0],ip_a[1],ip_a[2],ip_a[3]))
