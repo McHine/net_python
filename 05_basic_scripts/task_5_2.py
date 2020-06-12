@@ -21,7 +21,7 @@ Mask:
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 """
 
-# get user nonsense
+# get user`s nonsense
 user_data = input("Введите IP-адрес: ")
 
 ip_and_mask = user_data.split('/')
