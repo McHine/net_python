@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Задание 5.3
@@ -63,3 +64,12 @@ trunk_template = [
     "switchport mode trunk",
     "switchport trunk allowed vlan {}",
 ]
+
+general_template = {"access": access_template, "trunk": trunk_template}
+
+interface_mode = input("Введите режим работы интерфейса (access/trunk): ")
+type_number_intetrface = input("Введите тип и номер интерфейса: ")
+vlan_number = input("Введите номер влан(ов): ")
+
+print("interface {}".format(type_number_intetrface))
+print('\n'.join(general_template[interface_mode]).format(vlan_number))
