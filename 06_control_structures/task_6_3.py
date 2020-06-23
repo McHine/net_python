@@ -53,6 +53,7 @@ for intf, vlan in access.items():
         else:
             print(" {}".format(command))
 
+print("\n{}\n".format(('#' * 40)))
 
 for port_number, actions in trunk.items():
     print('Port ' + port_number)
