@@ -22,16 +22,16 @@ ip_in_octets = ip_address.split('.')
 octets = []
 
 for octet in ip_in_octets:
-	octets.append(int(octet))
+    octets.append(int(octet))
 
 
 if octets[0] > 0 and octets[0] <= 223:
-	print('unicast')
+    print('unicast')
 elif octets[0] > 223 and octets[0] <= 239:
-	print('multicast')
+    print('multicast')
 elif ip_address == '255.255.255.255':
-	print('local broadcast')
+    print('local broadcast')
 elif ip_address == '0.0.0.0':
-	print('unassigned')
+    print('unassigned')
 else:
-	print('unused')
+    print('unused')
