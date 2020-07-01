@@ -20,12 +20,6 @@
 """
 ip_address = input("Введите IP-адрес в формате 10.0.1.1: ")
 
-ip_in_octets = ip_address.split('.')
-
-octets = []
-
-for octet in ip_in_octets:
-    octets.append(int(octet))
 
 
 if octets[0] > 0 and octets[0] <= 223:
