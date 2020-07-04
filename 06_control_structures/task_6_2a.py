@@ -38,7 +38,6 @@ while True:
             octets.append(int(octet))
         else:            
             print("Неправильный IP-адрес")
-            break
     if len(octets) != 4:
         break
 
