@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Задание 7.1
@@ -13,3 +14,6 @@ Outbound Interface    FastEthernet0/0
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+outf = open('ospf.txt', 'r')
+for line in outf:
+    print(line.rstrip())
