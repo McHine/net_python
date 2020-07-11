@@ -23,3 +23,8 @@ filename = argv[1]
 
 outf = open(filename, 'r')
 
+for line in outf:
+    if "Gi0/" in line:
+        print(line.strip())
+    else:
+        continue
