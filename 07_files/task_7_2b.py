@@ -29,4 +29,4 @@ for line in outf:
     if ignore_string == False:
         file_for_write.write(line)
         
-file_for_write.close()               
+file_for_write.close()

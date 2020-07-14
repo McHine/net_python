@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Задание 7.2c
@@ -17,3 +18,19 @@
 """
 
 ignore = ["duplex", "alias", "Current configuration"]
+
+from sys import argv
+src_file = argv[1]
+dst_file = argv[2]
+file_write = open(dst_file, 'w') # 'config_sw1_cleared_7_2c.txt'
+
+file_read = open(src_file, 'r')
+for line in file_read:
+    ignore_string = False
+    for element in ignore:
+        if element in line:
+            ignore_string = True
+    if ignore_string == False:
+        file_write.write(line)
+        
+file_write.close()
