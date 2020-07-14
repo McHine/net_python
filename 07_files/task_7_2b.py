@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Задание 7.2b
@@ -14,3 +15,18 @@
 """
 
 ignore = ["duplex", "alias", "Current configuration"]
+
+from sys import argv
+filename = argv[1]
+file_for_write = open('config_sw1_cleared.txt', 'w')
+
+outf = open(filename, 'r')
+for line in outf:
+    ignore_string = False
+    for element in ignore:
+        if element in line:
+            ignore_string = True
+    if ignore_string == False:
+        file_for_write.write(line)
+        
+file_for_write.close()               
