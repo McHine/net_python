@@ -15,14 +15,20 @@
 
 ignore = ["duplex", "alias", "Current configuration"]
 
-# from sys import argv
-# filename = argv[1]
+from sys import argv
+filename = argv[1]
 
 
-outf = open('07_files/config_sw1.txt', 'r')
+outf = open(filename, 'r')
 for line in outf:
     if line.startswith("!"):
         continue
-    elif 
+    else:
+        ignore_string = False
+        for element in ignore:
+            if element in line:
+                ignore_string = True
+        if ignore_string == False:
+            print(line.strip())
             
                 
